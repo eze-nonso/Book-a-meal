@@ -19,10 +19,22 @@
   </div>
 </header>
 <main class='main-body--2'>
-  <aside class='main-body--2__aside'>
-    <a href='#'>Order Details</a>
-    <a href='#'>Picks for the day</a>
-    <a href='#'>More</a>
+<aside class='main-body--2__aside main-body--2__aside--nav dropdown'>
+  <button class='dropbtn'>Select Date</button>
+  <nav class='dropdown-content'>
+      <a href='#'>Order Details</a>
+      <a href='#'>Picks for the day</a>
+      <a href='#' class='active'>All Menus</a>
+      <a href='#'>Order Details</a>
+      <a href='#'>Picks for the day</a>
+      <a href='#'>More</a>
+      <a href='#'>Order Details</a>
+      <a href='#'>Picks for the day</a>
+      <a href='#'>More</a>
+      <a href='#'>Order Details</a>
+      <a href='#'>Picks for the day</a>
+      <a href='#'>More</a>
+    </nav>
   </aside>
   <section class='main-body--2__section'>
     <div class='card'>
@@ -31,42 +43,44 @@
       </div>
       <div class='card__body'>
         <div class='card__body__heading'>
-          <p>Arroz Primavera con Pechuga de Pollo</p>
+          <p>Apple mixins and Ballachinos</p>
         </div>
         <div class='card__body__detail'>
-          <span class='badge badge-1'>
-            DOP 60.00
+          <span class='badge badge--1'>
+            $ 60.00
           </span>
-          <button class='btn btn-2' id='myBtn'>
-            Agregar
+          <button class='btn btn-2 js-modal-btn' id='modal-btn'>
+            Actions
           </button>
 
-          <div id="myModal" class="modal">
+          <div id="modal" class="modal">
+            <span class="close text-right">&times;</span>
+          <!-- Modal content -->
+            <div class="modal-content modal-content--form">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div>
-      <form>
-          <fieldset class='fieldset-control'>
-            <label for='menu' class='sr-only'>Menu</label>
-            <input class='input-control' name='menu' type='text' placeholder="Menu"/>
-          </fieldset>
-          <fieldset class='fieldset-control'>
-            <label for='price' class='sr-only'>Price</label>
-            <input class='input-control' name='price' type='number' placeholder="Price"/>
-          </fieldset>
-        <fieldset class='fieldset-control'>
-          <label for='image'>Image: </label>
-          <input name='image' type='file' placeholder='Image'>
-        </fieldset>
-          <button class='btn btn-2' type='submit' style='background-color:#E7717D;'>Update Current</button>
-        <button class='btn btn-1' type='submit'>Save New</button>
-        </form>
-    </div>
-  </div>
+              <div>
+                <form>
+                  <fieldset class='fieldset-control'>
+                    <label for='menu' class='sr-only'>Menu</label>
+                    <input class='input-control' name='menu' type='text' placeholder="Menu"/>
+                  </fieldset>
+                  <fieldset class='fieldset-control'>
+                    <label for='price' class='sr-only'>Price</label>
+                    <input class='input-control' name='price' type='number' placeholder="Price"/>
+                  </fieldset>
+                  <fieldset class='fieldset-control'>
+                    <label for='image'>Image: </label>
+                    <input name='image' type='file' placeholder='Image'>
+                  </fieldset>
+                    <button class='btn btn-2' type='submit' style='background-color:#E7717D;'>Update Current</button>
+                  <button class='btn btn-1' type='submit'>Save New</button>
+                </form>
+              </div>
 
-</div>
+
+            </div>
+
+          </div>
 
         </div>
       </div>
@@ -78,14 +92,14 @@
       </div>
       <div class='card__body'>
         <div class='card__body__heading'>
-          <p>Arroz Primavera con Pechuga de Pollo</p>
+          <p>Apple mixins and Ballachinos</p>
         </div>
         <div class='card__body__detail'>
-          <span class='badge badge-1'>
-            DOP 60.00
+          <span class='badge badge--1'>
+            $ 60.00
           </span>
           <button class='btn btn-2'>
-            Agregar
+            Actions
           </button>
         </div>
       </div>
@@ -97,14 +111,14 @@
       </div>
       <div class='card__body'>
         <div class='card__body__heading'>
-          <p>Arroz Primavera con Pechuga de Pollo</p>
+          <p>Apple mixins and Ballachinos</p>
         </div>
         <div class='card__body__detail'>
-          <span class='badge badge-1'>
-            DOP 60.00
+          <span class='badge badge--1'>
+            $ 60.00
           </span>
           <button class='btn btn-2'>
-            Agregar
+            Actions
           </button>
         </div>
       </div>
@@ -116,14 +130,14 @@
       </div>
       <div class='card__body'>
         <div class='card__body__heading'>
-          <p>Arroz Primavera con Pechuga de Pollo</p>
+          <p>Apple mixins and Ballachinos</p>
         </div>
         <div class='card__body__detail'>
-          <span class='badge badge-1'>
-            DOP 60.00
+          <span class='badge badge--1'>
+            $ 60.00
           </span>
           <button class='btn btn-2'>
-            Agregar
+            Actions
           </button>
         </div>
       </div>
@@ -132,7 +146,7 @@
     </div>
   </section>
 </main>
-<footer class='footer-control body--1__footer'>
+<footer class='body--1__footer'>
 </footer>
 <script src='./js/script.js'></script>
 </body>
