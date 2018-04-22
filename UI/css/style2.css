@@ -108,13 +108,14 @@ body {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   box-shadow: 0 0 2px 1px #FFF, 0 0 2px 1px rgba(255, 255, 255, 0.5);
+  font-weight: bolder;
   text-transform: uppercase;
 }
 
 .main__sec2__discover > a {
   box-shadow: 0 0 2px 1px rgb(255, 235, 59), 0 0 2px 1px rgba(255, 186, 0, 0.5);
-  color: #ffeb3b;
-  font-weight: 450;
+  color: #151514;
+  font-weight: bolder;
 }
 
 .logo {
