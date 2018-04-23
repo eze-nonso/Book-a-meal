@@ -16,6 +16,88 @@ const removeOrder = document.getElementsByClassName('js-remove-order');
 
 const orders = document.getElementsByClassName('js-orders');
 
+const hamburger = document.getElementsByClassName('hamburger');
+
+const details = document.getElementsByClassName('details');
+
+
+// hamburger for slidemenu
+for (let ham of hamburger) {
+  ham.addEventListener('click', toggleSlideMenu);
+}
+
+function toggleSlideMenu() {
+  const sideMenu = document.getElementById('side-menu');
+  console.log(sideMenu.style.left)
+
+  // if not yet set by js, or set
+  if (!sideMenu.style.left || sideMenu.style.left == '-300px') {
+    sideMenu.style.left = '0px';
+    return;
+  }
+  sideMenu.style.left = '-300px';
+
+}
+
+for (let detail of details) {
+  let card = detail.parentNode;
+
+  let expand = detail.parentNode.querySelector('.expand');
+
+  let action = card.querySelector('.action');
+
+  let closeCard = detail.querySelector('.close-card');
+
+  expand.addEventListener('click', toggleDetail(expand, detail, card, action));
+
+  closeCard.addEventListener('click', toggleDetail(expand, detail, card, action));
+}
+
+function toggleDetail(expand, detail, card, action) {
+  return function(evt) {
+    if (evt.target == expand)
+    {
+      card.style.overflow = 'hidden';
+      detail.style.display = 'block';
+      action.style.display = 'block';
+      action.style.transitionDelay = '0.3s';
+      detail.style.opacity = 1;
+
+      action.style.opacity = 1;
+      setTimeout(function() {
+
+        detail.style.transform = 'translateY(-100%)';
+
+
+        action.style.transform = 'translateY(-100%)';
+      });
+      return;
+    }
+
+
+
+    detail.style.opacity = 0;
+    detail.style.transform = 'translateY(100%)';
+
+    action.style.transitionDelay = 'unset';
+
+    action.style.transform = 'translateY(100%)';
+
+    action.style.opacity = 0;
+
+    setTimeout(function() {
+      detail.style.display = 'none';
+      card.style.overflow = 'visible';
+      action.style.display = 'none';
+
+    }, 500);
+
+  }
+}
+
+
+
+
 for (let card of cards) {
   card.addEventListener('mouseover', function(evt) {
     let actionBar = this.querySelector(' .card__body__detail__action');
@@ -52,18 +134,19 @@ for (let card of cards) {
   });
 }
 
-for (let i of order) {
-  i.addEventListener('click', function() {
-    this.parentNode.parentNode.parentNode.querySelector(' .js-orders').textContent++;
-  })
-}
+// for (let i of order) {
+//   i.addEventListener('click', function() {
+//     this.parentNode.parentNode.parentNode.querySelector(' .js-orders').textContent++;
+//   })
+// }
 
 
 for (let button of btn) {
   button.addEventListener('click', showModal);
 }
-
-close.addEventListener('click', closeModal);
+if (close) {
+  close.addEventListener('click', closeModal);
+}
 
 function showModal (evt) {
   modal.style.display = 'block';
