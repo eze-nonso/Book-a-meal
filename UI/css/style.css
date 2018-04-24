@@ -398,13 +398,19 @@ div#drawer {
 
 div#drawer .card-columns {
     column-width:  200px;
+    column-gap: 0.5rem;
 }
 
-.add-menu {
-  border: 1px solid red;
+#add-menu, #edit-menu {
+  padding-bottom: 10px;
 }
 
-.add-menu h3 {
+#add-menu:hover {
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+
+#add-menu h4, #edit-menu h4 {
   margin-top: unset;
 }
 
@@ -420,13 +426,11 @@ div#drawer .panel {
   padding: 1rem;
 }
 
-.panel h3 {
-
-}
 
 .panel textarea {
   resize: none;
   font-size: 2rem;
+  padding: 15px;
 }
 
 .panel textarea:focus {
@@ -965,6 +969,11 @@ div.first:not(:only-child):not(:last-child) {
   color: black;
   display: block;
   transition: 0.3s;
+}
+
+.active-nav-link {
+  background-color: #e2e7f4;
+  color: #039bef;
 }
 
 a#btn-close {

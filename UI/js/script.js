@@ -22,15 +22,41 @@ const details = document.getElementsByClassName('details');
 
 const adminCards = document.querySelectorAll('.card.admin');
 
+const drawer = document.getElementById('drawer');
+
+// to manually open drawer to add menu
+const addMenu = document.getElementById('add-menu');
+
+const updateMenu = document.getElementById('update');
+
+const deleteMenu = document.getElementById('delete');
+
 for (let card of adminCards) {
   card.addEventListener('click', editCard)
 }
+
+updateMenu.addEventListener('click', reload);
+
+deleteMenu.addEventListener('click', reload);
+
+addMenu.addEventListener('click', openDrawer);
 
 function editCard(evt) {
   const pickedCard = evt.target.closest('.card.admin');
   pickedCard.style.backgroundColor = '#FFF';
   pickedCard.style.boxShadow = '0 0 5px 4px #9aa1a7, 0px 0px 5px 8px #b1b7bb';
-  
+  openDrawer(pickedCard);
+}
+
+function openDrawer(card) {
+  if (!drawer.style.height) {
+    drawer.style.padding = '1rem';
+    drawer.style.height = 'unset';
+  }
+}
+
+function reload() {
+  window.location.reload(true);
 }
 
 // hamburger for slidemenu
@@ -105,8 +131,6 @@ function toggleDetail(expand, detail, card, action) {
 
   }
 }
-
-
 
 
 for (let card of cards) {
