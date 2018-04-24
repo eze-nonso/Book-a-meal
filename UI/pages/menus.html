@@ -4,149 +4,132 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat|Prompt" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='../css/style.css'/>
 </head>
 
+
 <body class='body--1'>
 <header class='header-control body--1__header'>
-  <h1>Booker</h1>
-  <div>
-    <p><a href='#'>Account</a></p>
-    <p><a href='#'>More</a></p>
-    <p><a href='#'>About us</a></p>
-    <p><a href='#'>Contact us</a></p>
-  </div>
+  <h1 class='logo logo--main'>Booker</h1>
+  <span class='hamburger'></span>
+
 </header>
+
 <main class='main-body--2'>
-<aside class='main-body--2__aside main-body--2__aside--nav dropdown'>
-  <button class='dropbtn'>Select Date</button>
-  <nav class='dropdown-content'>
-      <a href='#'>Order Details</a>
-      <a href='#'>Picks for the day</a>
-      <a href='#' class='active'>All Menus</a>
-      <a href='#'>Order Details</a>
-      <a href='#'>Picks for the day</a>
-      <a href='#'>More</a>
-      <a href='#'>Order Details</a>
-      <a href='#'>Picks for the day</a>
-      <a href='#'>More</a>
-      <a href='#'>Order Details</a>
-      <a href='#'>Picks for the day</a>
-      <a href='#'>More</a>
-    </nav>
+  <aside   class='main-body--2__aside main-body--2__aside--nav'>
+    <div id='side-menu' class='side-nav'>
+      <a href="#" id='btn-close'>&times;</a>
+      <a href='../index.html'>Home</a>
+      <a href='./menus.html'>Menus
+      </a>
+      <a href='./summary.html'>Details</a>
+      <a href='./set-daily.html'>Set Meals</a>
+    </div>
   </aside>
-  <section class='main-body--2__section'>
-    <div class='card'>
-      <div class='card__pix'>
-        <img src='https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-      </div>
-      <div class='card__body'>
-        <div class='card__body__heading'>
-          <p>Apple mixins and Ballachinos</p>
+  <section class='main-body--2__section main-body--2__section--columns'>
+
+    <div class='row' style='justify-content:center;'>
+      <div class='col-5'>
+        <div class='label'>
+          <div class='label-img'>
+            <img src='../assets/images/admin.svg' alt='admin'>
+          </div>
+          <div class='label-text'>
+            <h3>Modify Menus</h3>
+          </div>
         </div>
-        <div class='card__body__detail'>
-          <span class='badge badge--1'>
-            $ 60.00
-          </span>
-          <button class='btn btn-2 js-modal-btn' id='modal-btn'>
-            Actions
-          </button>
+      </div>
 
-          <div id="modal" class="modal">
-            <span class="close text-right">&times;</span>
-          <!-- Modal content -->
-            <div class="modal-content modal-content--form">
-
-              <div>
-                <form>
-                  <fieldset class='fieldset-control'>
-                    <label for='menu' class='sr-only'>Menu</label>
-                    <input class='input-control' name='menu' type='text' placeholder="Menu"/>
-                  </fieldset>
-                  <fieldset class='fieldset-control'>
-                    <label for='price' class='sr-only'>Price</label>
-                    <input class='input-control' name='price' type='number' placeholder="Price"/>
-                  </fieldset>
-                  <fieldset class='fieldset-control'>
-                    <label for='image'>Image: </label>
-                    <input name='image' type='file' placeholder='Image'>
-                  </fieldset>
-                    <button class='btn btn-2' type='submit' style='background-color:#E7717D;'>Update Current</button>
-                  <button class='btn btn-1' type='submit'>Save New</button>
-                </form>
-              </div>
+    </div>
 
 
+    <div class='row'>
+      <div class='col-4'>
+        <div class='card card--2'>
+          <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='menus'>
+          <div class='card-body'>
+            <span class='expand'></span>
+            <h4 class='card-title'>Sweet Potatoes and Black Beans Tacos</h4>
+            <h5 class='card-subtitle'>Now trending</h5>
+            <p class='text-muted'>Last booked 17 mins ago</p>
+          </div>
+          <div class='details'>
+            <span class='close-card'>&times;</span>
+            <div class='detail-body'>
+              <h3>To Die for Crock roast pot</h3>
+              <p>
+                The traditional cuisine of Japan (和食 washoku) is based on rice with miso soup and other dishes.
+                Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, but also served raw as sashimi or in sushi.
+              </p>
             </div>
 
           </div>
+          <div class='action'>
+            <h4 class='badge badge--2'>Price: $67</h4>
+            <!-- <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button> -->
+          </div>
+        </div>
+      </div>
+      <div class='col-4'>
+        <div class='card card--2'>
+          <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='menus'>
+          <div class='card-body'>
+            <span class='expand'></span>
+            <h4 class='card-title'>To die for Cock roast pot</h4>
+            <h5 class='card-subtitle'>Now trending</h5>
+            <p class='text-muted'>Popular listing</p>
+          </div>
 
-        </div>
-      </div>
-    </div>
+          <div class='details'>
+            <span class='close-card'>&times;</span>
+            <div class='detail-body'>
+              <h3>To Die for Crock roast pot</h3>
+              <p>
+                The traditional cuisine of Japan (和食 washoku) is based on rice with miso soup and other dishes.
+                Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, but also served raw as sashimi or in sushi.
+              </p>
+            </div>
 
-    <div class='card'>
-      <div class='card__pix'>
-        <img src='https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-      </div>
-      <div class='card__body'>
-        <div class='card__body__heading'>
-          <p>Apple mixins and Ballachinos</p>
-        </div>
-        <div class='card__body__detail'>
-          <span class='badge badge--1'>
-            $ 60.00
-          </span>
-          <button class='btn btn-2'>
-            Actions
-          </button>
+          </div>
+          <div class='action'>
+            <h4 class='badge badge--2'>Price: $67</h4>
+            <!-- <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button> -->
+          </div>
         </div>
       </div>
-    </div>
+      <div class='col-4'>
+        <div class='card card--2'>
+          <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='menus'>
+          <div class='card-body'>
+            <span class='expand'></span>
+            <h4 class='card-title'>To die for Cock roast pot</h4>
+            <h5 class='card-subtitle'>Now trending</h5>
+            <p class='text-muted'>Popular</class>
+          </div>
 
-    <div class='card'>
-      <div class='card__pix'>
-        <img src='https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-      </div>
-      <div class='card__body'>
-        <div class='card__body__heading'>
-          <p>Apple mixins and Ballachinos</p>
-        </div>
-        <div class='card__body__detail'>
-          <span class='badge badge--1'>
-            $ 60.00
-          </span>
-          <button class='btn btn-2'>
-            Actions
-          </button>
-        </div>
-      </div>
-    </div>
+          <div class='details'>
+            <span class='close-card'>&times;</span>
+            <div class='detail-body'>
+              <h3>To Die for Crock roast pot</h3>
+              <p>
+                The traditional cuisine of Japan (和食 washoku) is based on rice with miso soup and other dishes.
+                Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, but also served raw as sashimi or in sushi.
+              </p>
+            </div>
 
-    <div class='card'>
-      <div class='card__pix'>
-        <img src='https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-      </div>
-      <div class='card__body'>
-        <div class='card__body__heading'>
-          <p>Apple mixins and Ballachinos</p>
-        </div>
-        <div class='card__body__detail'>
-          <span class='badge badge--1'>
-            $ 60.00
-          </span>
-          <button class='btn btn-2'>
-            Actions
-          </button>
+          </div>
+          <div class='action'>
+            <h4 class='badge badge--2'>Price: $67</h4>
+            <!-- <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button> -->
+          </div>
         </div>
       </div>
-
-
     </div>
   </section>
 </main>
-<footer class='body--1__footer'>
+<footer class='footer-control body--1__footer'>
 </footer>
 <script src='../js/script.js'></script>
 </body>
