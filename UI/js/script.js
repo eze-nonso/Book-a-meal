@@ -20,6 +20,18 @@ const hamburger = document.getElementsByClassName('hamburger');
 
 const details = document.getElementsByClassName('details');
 
+const adminCards = document.querySelectorAll('.card.admin');
+
+for (let card of adminCards) {
+  card.addEventListener('click', editCard)
+}
+
+function editCard(evt) {
+  const pickedCard = evt.target.closest('.card.admin');
+  pickedCard.style.backgroundColor = '#FFF';
+  pickedCard.style.boxShadow = '0 0 5px 4px #9aa1a7, 0px 0px 5px 8px #b1b7bb';
+  
+}
 
 // hamburger for slidemenu
 for (let ham of hamburger) {
@@ -28,7 +40,6 @@ for (let ham of hamburger) {
 
 function toggleSlideMenu() {
   const sideMenu = document.getElementById('side-menu');
-  console.log(sideMenu.style.left)
 
   // if not yet set by js, or set
   if (!sideMenu.style.left || sideMenu.style.left == '-300px') {

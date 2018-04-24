@@ -22,7 +22,7 @@
     <div id='side-menu' class='side-nav'>
       <a href="#" id='btn-close'>&times;</a>
       <a href='../index.html'>Home</a>
-      <a href='./menus.html'>Menus
+      <a class='active-nav-link' href='./menus.html'>Menus
       </a>
       <a href='./summary.html'>Details</a>
       <a href='./set-daily.html'>Set Meals</a>
@@ -30,8 +30,8 @@
   </aside>
   <section class='main-body--2__section main-body--2__section--columns'>
 
-    <div class='row' style='justify-content:center;'>
-      <div class='col-5'>
+    <div class='row justify-center'>
+      <div class='col-12 col-sm-8 col-lg-5'>
         <div class='label'>
           <div class='label-img'>
             <img src='../assets/images/admin.svg' alt='admin'>
@@ -44,10 +44,32 @@
 
     </div>
 
+    <div class='row justify-center'>
+      <div class='col-lg-4 col-sm-8 col-12'>
+
+        <div class='label label--sec mb-3 mb-lg-0 add-menu'>
+          <div class='label-text'>
+            <h4>New Menu</h4>
+          </div>
+          <div class='label-img'>
+            <img class='label-img' style='height:50px;' src='../assets/images/new.svg' alt='pick me'>
+          </div>
+        </div>
+
+        <div class='label label--sec mb-3 mb-lg-0'>
+          <div class='label-text'>
+            <h4>Click Me to Edit</h4>
+          </div>
+          <div class='label-img'>
+            <img class='label-img' style='transform:rotate(180deg);height:50px;' src='../assets/images/pick.svg' alt='pick me'>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class='row'>
-      <div class='col-4'>
-        <div class='card card--2'>
+      <div class='col-12 col-lg-4 col-sm-5'>
+        <div class='card card--2 admin mb-3 mb-lg-0'>
           <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='menus'>
           <div class='card-body'>
             <span class='expand'></span>
@@ -72,8 +94,8 @@
           </div>
         </div>
       </div>
-      <div class='col-4'>
-        <div class='card card--2'>
+      <div class='col-12 col-lg-4 col-sm-5'>
+        <div class='card card--2 admin mb-3 mb-lg-0'>
           <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='menus'>
           <div class='card-body'>
             <span class='expand'></span>
@@ -99,8 +121,8 @@
           </div>
         </div>
       </div>
-      <div class='col-4'>
-        <div class='card card--2'>
+      <div class='col-12 col-lg-4 col-sm-5'>
+        <div class='card card--2 admin'>
           <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='menus'>
           <div class='card-body'>
             <span class='expand'></span>
@@ -125,6 +147,40 @@
             <!-- <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button> -->
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id='drawer'>
+      <div class='card-columns'>
+        <div class='panel mb-2'>
+          <h3>Enter Menu Name</h3>
+          <input class='input-control' type='text' id name form='menuform'>
+        </div>
+
+        <div class='panel mb-2'>
+          <h3>Enter Short Description</h3>
+          <p class='text-muted'>50 characters max</p>
+
+          <textarea name="comment" form="menuform"></textarea>
+        </div>
+
+        <div class='panel mb-2'>
+          <h3>Enter Optional Menu Subheading</h3>
+          <input class='input-control' type='text' id name form='menuform'>
+        </div>
+
+        <div class='panel mb-2'>
+          <h3>Enter Optional Menu Paragraph Info</h3>
+          <p class='text-muted'>Keep Really Short</p>
+          <input class='input-control' type='text' id name form='menuform'>
+        </div>
+
+        <div class='panel'>
+          <h3>And an Illustrative Image</h3>
+          <input class='input-control' type='file' id name form='menuform'>
+        </div>
+
+
       </div>
     </div>
   </section>
