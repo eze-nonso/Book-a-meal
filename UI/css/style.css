@@ -371,8 +371,9 @@ a:hover {
   cursor: pointer;
 }
 
-.card.admin:active {
-    box-shadow: 0 0 5px 4px #9aa1a7, 0px 0px 5px 8px #b1b7bb;
+.card-active {
+    box-shadow: 0 0 5px 4px #9aa1a7, 0px 0px 5px 8px #b1b7bb !important;
+    background-color: #FFF !important;
 }
 
 .close-card {
@@ -388,17 +389,22 @@ a:hover {
 
 div#drawer {
   border: 1px solid #FFF;
-  height: 0px;
   overflow: hidden;
   margin-top: 12px;
   background-color: inherit;
-  padding: 1rem;
+  transition: 0.5s;
   padding: 0;
+  height: 0px;
 }
 
 div#drawer .card-columns {
     column-width:  200px;
     column-gap: 0.5rem;
+}
+
+.open-drawer {
+  padding: 1rem !important;
+  height: unset !important;
 }
 
 #add-menu, #edit-menu {

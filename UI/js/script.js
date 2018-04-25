@@ -31,28 +31,46 @@ const updateMenu = document.getElementById('update');
 
 const deleteMenu = document.getElementById('delete');
 
+// child components steal click on card - evt.target cannot be relied on
 for (let card of adminCards) {
   card.addEventListener('click', editCard)
 }
 
-updateMenu.addEventListener('click', reload);
+// deal with null cases
+if (updateMenu) {
+  updateMenu.addEventListener('click', reload);
+}
 
-deleteMenu.addEventListener('click', reload);
+if (deleteMenu) {
+  deleteMenu.addEventListener('click', reload);
+}
 
-addMenu.addEventListener('click', openDrawer);
+if (addMenu) {
+  addMenu.addEventListener('click', openDrawer);
+}
 
 function editCard(evt) {
   const pickedCard = evt.target.closest('.card.admin');
-  pickedCard.style.backgroundColor = '#FFF';
-  pickedCard.style.boxShadow = '0 0 5px 4px #9aa1a7, 0px 0px 5px 8px #b1b7bb';
+  pickedCard.classList.add('card-active');
+  // loop through cards and deactivate any activated
+  for (let card of adminCards) {
+    const otherCard = card.closest('.card.admin');
+    if (otherCard !== pickedCard && otherCard.classList.contains('card-active')) {
+      otherCard.classList.remove('card-active');
+    }
+  }
   openDrawer(pickedCard);
 }
 
 function openDrawer(card) {
   if (!drawer.style.height) {
-    drawer.style.padding = '1rem';
-    drawer.style.height = 'unset';
+    drawer.classList.add('open-drawer');
   }
+
+  // focus form
+  let form = document.forms['menuform'];
+  form.elements[0].focus();
+
 }
 
 function reload() {
