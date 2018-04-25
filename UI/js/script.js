@@ -85,12 +85,18 @@ for (let ham of hamburger) {
 function toggleSlideMenu() {
   const sideMenu = document.getElementById('side-menu');
 
+  const dimmer = document.querySelector("[data-dimmer]");
   // if not yet set by js, or set
   if (!sideMenu.style.left || sideMenu.style.left == '-300px') {
     sideMenu.style.left = '0px';
+    // dim body and remove scroll
+    dimmer.style.visibility = 'visible';
+    document.body.classList.add('nav-dimmer-open');
     return;
   }
   sideMenu.style.left = '-300px';
+  dimmer.style.visibility = 'hidden';
+  document.body.classList.remove('nav-dimmer-open');
 
 }
 
