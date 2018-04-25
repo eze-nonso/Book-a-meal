@@ -900,9 +900,6 @@ th {
   color: #FFF;
 }
 
-
-
-
 .modal__card__body__sum__detail {
   display: flex;
   justify-content: space-around;
@@ -1114,7 +1111,7 @@ div.first:not(:only-child):not(:last-child) {
 @media only screen and (min-width:850px) {
 
   .card-columns {
-    column-count: 4;
+    column-count: 3;
   }
 
 }
@@ -1405,7 +1402,6 @@ a#btn-close {
   flex-flow: column;
 }
 
-
 @media only screen and (max-width:500px) {
   .logo--main {
     font-size: 3.8rem;
@@ -1531,4 +1527,5 @@ utility classes
 
   .pb-lg-3 {
     margin-bottom: 1rem;
-      
+  }
+}    
