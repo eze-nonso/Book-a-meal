@@ -1,0 +1,35 @@
+{
+  "name": "booker",
+  "version": "1.0.0",
+  "description": "An app that lets customers make food orders and lets the food vendor know what customers want to eat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eze-nonso/Book-a-meal.git"
+  },
+  "author": "eze nonso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eze-nonso/Book-a-meal/issues"
+  },
+  "homepage": "https://github.com/eze-nonso/Book-a-meal#readme",
+  "devDependencies": {
+    "chai-http": "^4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.3"
+  },
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "bcrypt": "^2.0.1",
+    "express-validator": "^5.1.2"
+  }
+}

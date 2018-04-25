@@ -1,0 +1,6 @@
+# Exclude UI directory
+UI/
+# Exclude json config files
+*.json
+# Exclude README.md
+README.md
