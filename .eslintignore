@@ -4,3 +4,5 @@ UI/
 *.json
 # Exclude README.md
 README.md
+# Exclude mocha.opts
+mocha.opts

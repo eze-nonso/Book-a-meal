@@ -1,3 +1,3 @@
 import { landing } from '../../controllers';
 
-export default app => app.get('/', landing)
+export default app => app.get('/', landing);

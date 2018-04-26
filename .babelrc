@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "transform-export-extensions",
+    "add-module-exports",
+  ],
+  "presets": [
+    "env",
+  ]
+}
