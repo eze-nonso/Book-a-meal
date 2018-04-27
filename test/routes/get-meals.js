@@ -7,13 +7,11 @@ import {
 suite('Logged in user can get all the meals in the application', function() {
   test('Expect response to contain all the meals in the application', function() {
     request
-    .get('/meals')
-    .then((res) => (
-      expect(res).to.be.an('object');
-      // content-type
-      expect(res.body).to.be.json;
-      expect(res.body).to.have.keys('meals');
+    .get(`/api/${V}meals`)
+    .then((res) => ({
+      resFormat(res, 200);
+      expect(res.body).to.include.keys('meals');
       expect(res.body).to.have.property('meals').that.is.an('array');
-    ));
-  })
-})
+    });
+  });
+});
