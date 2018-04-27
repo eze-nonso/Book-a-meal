@@ -1,5 +1,4 @@
 import express from 'express';
-import expressValidator from 'express-validator';
 import * as v1 from './routes/v1';
 
 const VERSIONS = {
@@ -18,9 +17,7 @@ const app = express();
 
 app
   .use(urlParser)
-  .use(jsonParser)
-  // use expressValidator after parsing
-  .use(expressValidator());
+  .use(jsonParser);
 
 // attach versions
 Object.keys(VERSIONS).forEach((v) => {

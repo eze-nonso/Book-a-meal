@@ -1,17 +1,21 @@
-import { respond } from '../helpers';
+import { body } from 'express-validator/check';;
 
-export default (req, res, next) => {
-  req.check('email', 'Invalid email address').isEmail();
 
-  req.check('pasword', 'Password is invalid').isLength({ min: 4 }).equals(req.body.confirmPassword);
+export default () => ([
+  body('email')
+  .isEmail()
+  .withMessage('Not an email address')
+  .trim()
+  .normalizeEmail(),
 
-  const errors = req.validationErrors();
+  body('password')
+  .isLength({ min: 6, })
+  .custom((password, { req, loc, path }) => {
+    if (password !== req.body.confirmPassword) {
+      throw Error('Passwords don\'t match');
+    }
+    return password;
+  }),
 
-  if (errors) {
-    return respond({
-      status: 422, error: errors, msg: 'Validation Error',
-    });
-  }
-
-  next();
-}
+  body('username').exists(),
+]);

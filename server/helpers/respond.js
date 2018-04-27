@@ -5,10 +5,10 @@ export default ({
     msg,
   };
 
-  for (let obj of extra) {
-    resBody = { ...resBody, obj
+  Object.keys(extra).forEach((key) => {
+    resBody = { ...resBody, [key]: extra[key]
     }
-  }
+  });
 
   res.status(status).send(resBody);
 }

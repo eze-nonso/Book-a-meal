@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 
 export default (req, res, next) => {
   const token = jwt.sign({
-    user: req.body.username,
+    user: req.body.valid.username,
   }, process.env.SECRET, {
     expiresIn: 86400,
   });
