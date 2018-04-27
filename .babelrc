@@ -2,8 +2,9 @@
   "plugins": [
     "transform-export-extensions",
     "add-module-exports",
+    "syntax-object-rest-spread"
   ],
   "presets": [
-    "env",
+    "env"
   ]
 }

@@ -3,7 +3,7 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../../server/app';
-import responseFormat from '../../server/helpers/resformat.test';
+import { resFormat as responseFormat } from '../../server/helpers';
 
 chai.use(chaiHttp);
 
