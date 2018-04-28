@@ -4,7 +4,7 @@ import {
   },
 } from '../../server/helpers';
 
-suite('Logged in user can get all the meals in the application', function() {
+suite('Get all the meal options', function() {
   test('Expect response to contain all the meals in the application', function() {
     request
     .get(`/api/${V}meals`)
