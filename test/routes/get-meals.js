@@ -28,6 +28,6 @@ suite('Get all the meal options', function () {
       resFormat(res, 200);
       expect(res.body).to.have.property('meals').that.is.an('array');
       expect(res.body.meals[0]).to.have.all.keys('id', 'description', 'image', 'name');
-    };
+    });
   });
 });
