@@ -26,7 +26,7 @@ suite('Add a meal option', function() {
 
     const meal = {
       name, image, description,
-    }
+    };
     requester
       .post(`/api/${V}/meals`)
       .type('form')
