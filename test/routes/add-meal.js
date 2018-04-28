@@ -4,6 +4,20 @@ import {
   },
 } from '../../server/helpers';
 
+/* return id of created resource with summary of resource
+
+{
+  id: 2,
+  msg: 'success',
+  meal: {
+    name: 'blah',
+    description: 'blah',
+    image: 'blah',
+  }
+}
+
+*/
+
 suite('Add a meal option', function() {
   test('Expect response to contain success message with newly created meal', function() {
     const name = 'Jollof rice',
@@ -18,10 +32,12 @@ suite('Add a meal option', function() {
       .type('form')
       .send(meal)
       .then((res) => {
-        resFormat(res, 200);
+        resFormat(res, 201);
+        // id of the updated resource
+        expect(res.body).to.have.property('id').that.is.a('number');
         expect(res.body.msg).to.equal('success');
-        expect(res.body.meals).to.be.an('array');
-        expect(res.body.meals).to.deep.nested.include(meal);
-      })
+        expect(res.body.meal).to.be.an('object');
+        expect(res.body.meal).to.include(meal);
+      });
   });
 });
