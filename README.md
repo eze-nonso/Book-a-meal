@@ -1,4 +1,4 @@
-<p>
+<p style='text-align:center;'>
   <a href='https://coveralls.io/github/eze-nonso/Book-a-meal?branch=develop'><img src='https://coveralls.io/repos/github/eze-nonso/Book-a-meal/badge.svg?branch=develop' alt='Coverage Status' /></a>
 
   <a href='https://travis-ci.org/eze-nonso/Book-a-meal'><img src='https://travis-ci.org/eze-nonso/Book-a-meal.svg?branch=develop' alt='Travis build' /></a>
