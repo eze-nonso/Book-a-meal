@@ -4,10 +4,11 @@
   "description": "An app that lets customers make food orders and lets the food vendor know what customers want to eat.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "nyc mocha",
     "lint": "eslint",
     "start:serve": "nodemon -x \"node -r dotenv/config ./node_modules/babel-cli/bin/babel-node ./server/bin/www\"",
-    "lint:all": "eslint \"server/**/*.js\" app.js"
+    "lint:all": "eslint \"server/**/*.js\" app.js",
+    "coverage": "nyc report | coveralls"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
+    "coveralls": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
@@ -29,7 +31,8 @@
     "eslint-plugin-react": "^7.7.0",
     "faker": "^4.1.0",
     "mocha": "^5.1.1",
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.17.3",
+    "nyc": "^11.7.1"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
