@@ -13,4 +13,4 @@ const resFormat = responseFormat.bind(null, expect);
 
 export default {
   requester, expect, V, resFormat, prefix,
-}
+};

@@ -14,7 +14,7 @@ export const dummyOrders = [
       name: 'Jollof rice',
       description: 'Valued meal in Africa',
       image: '../img.jpg',
-    }
+    },
     mealTime: 'lunch',
   },
 ];
@@ -31,8 +31,9 @@ export class Order {
         break;
       case 3:
         this.mealTime = 'dinner';
+        break;
       default:
         this.mealTime = 'unspecified';
-    };
-  };
-};
+    }
+  }
+}

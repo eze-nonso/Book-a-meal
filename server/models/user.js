@@ -1,8 +1,8 @@
-const dummyUser = {
+export const dummyUser = {
   profile: {
     email: 'dummy@mail.com',
     username: 'dummyusrname',
-    password: 'pass'
+    password: 'pass',
   },
 };
 
@@ -14,5 +14,3 @@ export class User {
     this.profile.password = password;
   }
 }
-
-export dummyUser;

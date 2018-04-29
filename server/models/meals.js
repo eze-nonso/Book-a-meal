@@ -1,4 +1,4 @@
-const dummyMeals = [{
+export const dummyMeals = [{
   name: 'Jollof rice',
   description: 'Valued meal in Africa',
   image: '../img.jpg',
@@ -14,6 +14,4 @@ export class Meal {
     this.description = description;
     this.image = image;
   }
-};
-
-export dummyMeals;
+}
