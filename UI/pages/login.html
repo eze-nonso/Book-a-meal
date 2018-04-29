@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='../css/style.css'/>
+  </head>
+  <body>
+    <header class='header-control'>
+      <h3>Booker</h3>
+      <div>
+        <p><a href='#'>Home</a></p>
+        <p><a href='##'>About Us</a></p>
+      </div>
+    </header>
+
+    <main class='main-body'>
+      <section class='main-body__login'>
+        <h3>Login</h3>
+        <form>
+          <fieldset class='fieldset-control'>
+            <label for='user' class='sr-only'>Username</label>
+            <input class='input-control' name='user' type='text' placeholder="Username/Email"/>
+          </fieldset>
+          <fieldset class='fieldset-control'>
+            <label for='paswd' class='sr-only'>Password</label>
+            <input class='input-control' name='paswd' type='password' placeholder="Password"/>
+          </fieldset>
+          <button class='btn btn-1' type='submit' class='btn-primary'>Log in</button>
+        </form>
+      </section>
+
+      <section class='main-body__signup'>
+        <h3>Sign Up</h3>
+        <form>
+          <fieldset class='fieldset-control'>
+            <label for='new-name' class='sr-only'>Enter Username</label>
+            <input class='input-control' type='text' name='new-name' placeholder="Enter Username"/>
+          </fieldset>
+          <fieldset class='fieldset-control'>
+            <label for='new-email' class='sr-only'>Enter Email</label>
+            <input class='input-control' type='email' name='new-email' placeholder="myemail@mail.com"/>
+          </fieldset>
+          <fieldset class='fieldset-control'>
+            <label for='new-pswd' class='sr-only'>Enter Password</label>
+            <input class='input-control' type='password' name='new-pswd' placeholder="Enter password"/>
+          </fieldset>
+          <fieldset class='fieldset-control'>
+            <label for='reenter-pswd' class='sr-only'>Reenter Password</label>
+            <input class='input-control' type='password' name='reenter-pswd' placeholder="Reenter Password"/>
+          </fieldset>
+          <button class='btn btn-1' type='submit'>Sign Up</button>
+        </form>
+      </section>
+    </main>
+
+    <script src='../js/script.js'>
+    </script>
+  </body>
+</html>

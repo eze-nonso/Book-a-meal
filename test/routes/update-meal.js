@@ -1,9 +1,8 @@
-import {
-  testSetup: {
-    requester, expect, V, resFormat,
-  },
-} from '../../server/helpers';
+import testSetup from '../testsetup';
 
+const {
+  requester, expect, V, resFormat,
+} = testSetup;
 
 /* return id of updated resource with summary of same
 
@@ -23,13 +22,13 @@ import {
 suite('Update the information of a meal option', function () {
   test('Expect response to contain updated meal option together with other options', function () {
     const name = 'Jollof rice',
-    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
     image = './somemeal.jpg';
 
     const meal = {
       name, image, description,
     }
-    requester
+    return requester
       .post(`/api/${V}/meals`)
       .type('form')
       .send(meal)
@@ -40,7 +39,7 @@ suite('Update the information of a meal option', function () {
           description: 'Lorem Ipsum',
           image: './lorem.png',
         };
-        requester
+        return requester
           .put(`/api/${V}/meals/${id}`)
           .type('form')
           .send(updateMeal)
@@ -51,7 +50,7 @@ suite('Update the information of a meal option', function () {
           })
           .then(() => {
             // check that former resource no longer exists
-            requester
+            return requester
               .get(`/api/${V}/meals`)
               .then((res) => {
                 expect(res.body.meals).to.deep.nested.include(updateMeal);

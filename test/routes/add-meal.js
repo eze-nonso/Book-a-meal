@@ -1,8 +1,8 @@
-import {
-  testSetup: {
-    requester, expect, V, resFormat,
-  },
-} from '../../server/helpers';
+import testSetup from '../testsetup';
+
+const {
+  requester, expect, V, resFormat,
+} = testSetup;
 
 /* return id of created resource with summary of resource
 
@@ -21,13 +21,14 @@ import {
 suite('Add a meal option', function() {
   test('Expect response to contain success message with newly created meal', function() {
     const name = 'Jollof rice',
-    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
     image = './somemeal.jpg';
 
     const meal = {
       name, image, description,
-    }
-    requester
+    };
+
+    return requester
       .post(`/api/${V}/meals`)
       .type('form')
       .send(meal)
