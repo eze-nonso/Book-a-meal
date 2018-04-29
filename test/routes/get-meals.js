@@ -1,9 +1,13 @@
 import testSetup from '../testsetup';
 
+const {
+  requester, expect, prefix, resFormat,
+} = testSetup;
+
 suite('Logged in user can get all the meals in the application', function () {
   test('Expect response to contain all the meals in the application', function () {
     request
-    .get(`/api/${V}meals`)
+    .get(`${prefix}meals`)
     .then((res) => ({
       resFormat(res, 200);
       expect(res.body).to.have.property('meals').that.is.an('array');
