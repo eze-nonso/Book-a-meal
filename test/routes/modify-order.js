@@ -1,8 +1,8 @@
-import {
-  testSetup: {
-    requester, expect, prefix, resFormat,
-  },
-} from '../../server/helpers';
+import testSetup from '../testsetup';
+
+const {
+  requester, expect, resFormat, prefix,
+} = testSetup;
 
 /*
 post
@@ -26,7 +26,7 @@ return updated resource with msg
 suite('Modify an order', function () {
   test('Expect response to contain summary of updated resource with success message', function () {
     // first place an order
-    requester
+    return requester
       .post(`${prefix}/orders`)
       .type('form')
       .send({
@@ -35,7 +35,7 @@ suite('Modify an order', function () {
       })
       .then(res => res.body.id)
       .then((id) => {
-        requester
+        return requester
           .post(`${prefix}/orders/${id}`)
           .type('form')
           .send({

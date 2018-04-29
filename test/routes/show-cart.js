@@ -1,8 +1,8 @@
-import {
-  testSetup: {
-    requester, expect, prefix, resFormat,
-  },
-} from '../../server/helpers';
+import testSetup from '../testsetup';
+
+const {
+  requester, expect, prefix, resFormat,
+} = testSetup;
 
 /* return resources with msg
 
@@ -23,13 +23,13 @@ import {
 
 suite('Get all the orders', function () {
   test('Expect response body to contain array of meal orders made', function () {
-    requester
+    return requester
       .get(`${prefix}/orders`)
-      then((res) => {
+      .then((res) => {
         resFormat(res, 200);
         expect(res.body).to.have.property('orders').an('array');
         expect(res.body.msg).to.equal
       });
-      
+
   });
 });

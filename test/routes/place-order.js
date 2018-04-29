@@ -1,8 +1,8 @@
-import {
-  testSetup: {
-    requester, expect, prefix, resFormat,
-  },
-} from '../../server/helpers';
+import testSetup from '../testsetup';
+
+const {
+  requester, expect, prefix, resFormat,
+} = testSetup;
 
 /*
 post
@@ -28,16 +28,19 @@ status: 201,
 
 suite('Select the meal options from the menu', function () {
   test('Expect response body to contain placed order and order id', function () {
+    const name = 'Lorem',
+    description = 'Ipsum',
+    image = 'Deut';
     const meal = {
       name, image, description,
     };
-    requester
-      .post(`/api/${V}/meals`)
+    return requester
+      .post(`${prefix}/meals`)
       .type('form')
       .send(meal)
       .then(res => res.body.id)
       .then((id) => {
-        requester
+        return requester
           .post(`${prefix}/orders`)
           .type('form')
           .send({

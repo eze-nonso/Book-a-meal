@@ -1,7 +1,7 @@
 import testSetup from '../testsetup';
 
 const {
-  requester, expect, V, resFormat,
+  requester, expect, prefix, resFormat,
 } = testSetup;
 
 /* return id of deleted resource with summary of deleted resource
@@ -27,13 +27,13 @@ suite('Remove a meal option', function() {
       name, image, description,
     }
     return requester
-      .post(`/api/${V}/meals`)
+      .post(`${prefix}/meals`)
       .type('form')
       .send(meal)
       .then(res => res.body.id)
       .then((id) => {
         return requester
-          .delete(`/api/${V}/meals/id`)
+          .delete(`${prefix}/meals/id`)
           .then((res) => {
             resFormat(res, 200);
             expect(res.body).to.have.property('deleted').that.is.an('object');
@@ -43,7 +43,7 @@ suite('Remove a meal option', function() {
           .then(() => {
             // confirm resource no longer exists
             return requester
-              .get(`/api/${V}/meals`)
+              .get(`${prefix}/meals`)
               .then((res) => {
                 expect(res.body.meals).to.not.deep.nested.include(meal);
               });

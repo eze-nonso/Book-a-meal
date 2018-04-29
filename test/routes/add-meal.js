@@ -1,7 +1,7 @@
 import testSetup from '../testsetup';
 
 const {
-  requester, expect, V, resFormat,
+  requester, expect, prefix, resFormat,
 } = testSetup;
 
 /* return id of created resource with summary of resource
@@ -29,7 +29,7 @@ suite('Add a meal option', function() {
     };
 
     return requester
-      .post(`/api/${V}/meals`)
+      .post(`${prefix}/meals`)
       .type('form')
       .send(meal)
       .then((res) => {

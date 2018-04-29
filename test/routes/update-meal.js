@@ -1,7 +1,7 @@
 import testSetup from '../testsetup';
 
 const {
-  requester, expect, V, resFormat,
+  requester, expect, prefix, resFormat,
 } = testSetup;
 
 /* return id of updated resource with summary of same
@@ -29,7 +29,7 @@ suite('Update the information of a meal option', function () {
       name, image, description,
     }
     return requester
-      .post(`/api/${V}/meals`)
+      .post(`${prefix}/meals`)
       .type('form')
       .send(meal)
       .then(res => res.body.id)
@@ -40,7 +40,7 @@ suite('Update the information of a meal option', function () {
           image: './lorem.png',
         };
         return requester
-          .put(`/api/${V}/meals/${id}`)
+          .put(`${prefix}/meals/${id}`)
           .type('form')
           .send(updateMeal)
           .then((res) => {
@@ -51,7 +51,7 @@ suite('Update the information of a meal option', function () {
           .then(() => {
             // check that former resource no longer exists
             return requester
-              .get(`/api/${V}/meals`)
+              .get(`${prefix}/meals`)
               .then((res) => {
                 expect(res.body.meals).to.deep.nested.include(updateMeal);
                 expect(res.body.meals).to.not.deep.nested.include(meal);
