@@ -15,6 +15,7 @@ return updated resource with msg
 {
   msg: 'success',
   order: {
+    id: 1,
     mealId: 1,
     mealTime: 'dinner',
   },
@@ -36,7 +37,7 @@ suite('Modify an order', function () {
       .then(res => res.body.id)
       .then((id) => {
         return requester
-          .post(`${prefix}/orders/${id}`)
+          .put(`${prefix}/orders/${id}`)
           .type('form')
           .send({
             mealTime: 3,

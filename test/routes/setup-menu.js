@@ -30,10 +30,10 @@ suite('Setup the menu for the day', function() {
         1, 2,
       ])
       .then((res) => {
-        resFormat(res, 200);
+        resFormat(res, 201);
         expect(res.body).to.have.property('menu').that.is.an('array');
         expect(res.body.msg).to.equal('success');
-        expect(res.body.menu).to.deep.nested.include({ id: 1 }, { id: 2 });
-      })
-  })
-})
+        expect(res.body.menu[0]).to.deep.include({ id: 1 });
+      });
+  });
+});

@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "node"
+
+env:
+  global:
+    NODE_ENV=test
+    VERSION=v1
+
+services:
+  - postgresql
+
+branches:
+  only: develop
+script:
+  - npm test -- --exit

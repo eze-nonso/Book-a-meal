@@ -47,15 +47,6 @@ suite('Update the information of a meal option', function () {
             resFormat(res, 200);
             expect(res.body.msg).to.equal('success');
             expect(res.body.meal).to.include(updateMeal);
-          })
-          .then(() => {
-            // check that former resource no longer exists
-            return requester
-              .get(`${prefix}/meals`)
-              .then((res) => {
-                expect(res.body.meals).to.deep.nested.include(updateMeal);
-                expect(res.body.meals).to.not.deep.nested.include(meal);
-              });
           });
       });
 

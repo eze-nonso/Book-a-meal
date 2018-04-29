@@ -4,23 +4,7 @@ const {
   requester, expect, prefix, resFormat,
 } = testSetup;
 
-/* return resources with msg
-
-{
-  msg: 'success',
-  meals: [
-    {
-      id: 2,
-      name: 'blah',
-      description: 'blah',
-      image: 'blah',
-    },
-  ]
-}
-
-*/
-
-suite('Get all the meal options', function () {
+suite('Logged in user can get all the meals in the application', function () {
   test('Expect response to contain all the meals in the application', function () {
     return requester
     .get(`${prefix}/meals`)

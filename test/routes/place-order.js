@@ -17,6 +17,7 @@ status: 201,
   msg: 'success',
   id: 2,
   order: {
+    id: 2,
     meal: {
       ....
     },
@@ -44,14 +45,14 @@ suite('Select the meal options from the menu', function () {
           .post(`${prefix}/orders`)
           .type('form')
           .send({
-            mealId: id, mealTime: 1,
+            mealId: 1, mealTime: 1,
           })
           .then((res) => {
             resFormat(res, 201);
             expect(res.body).to.have.property('id').that.is.a('number');
             expect(res.body.msg).to.equal('success');
             expect(res.body).to.have.property('order').an('object');
-            expect(res.body.order).to.have.all.keys('mealTime', 'meal');
+            expect(res.body.order).to.include.all.keys('mealTime', 'meal');
           });
       });
 
