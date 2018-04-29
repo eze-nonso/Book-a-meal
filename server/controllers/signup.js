@@ -1,4 +1,4 @@
-import User from '../mock/user';
+import { User } from '../models/user';
 import { respond } from '../helpers';
 
 export default (req, res) => {
