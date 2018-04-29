@@ -11,3 +11,5 @@ export addMeal from './add-meal';
 export deleteMeal from './delete-meal';
 
 export setupMenu from './setup-menu';
+
+export getMenu from './get-menu';
