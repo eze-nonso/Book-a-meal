@@ -9,3 +9,5 @@ export editMeal from './edit-meal';
 export addMeal from './add-meal';
 
 export deleteMeal from './delete-meal';
+
+export setupMenu from './setup-menu';

@@ -13,10 +13,10 @@ export const dummyMenus = [{
 export class Menu {
   constructor(mealIdList) {
     if (mealIdList instanceof Array) {
-      this.menus = [];
+      this.menu = [];
       for (let i = 0; i < mealIdList.length; i += 1) {
         const id = mealIdList[i];
-        this.menus.push(dummyMeals[id - 1]);
+        this.menu.push(dummyMeals[id - 1]);
       }
     }
   }
