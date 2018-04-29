@@ -5,7 +5,13 @@ import { respond } from '../helpers';
 export default (req, res) => {
   const id = +req.params.id;
 
-  const order = dummyOrders[id];
+  let order;
+
+  for (let i = 0; i < dummyOrders.length; i += 1) {
+    if (dummyOrders[i]['id'] == id) {
+      order = dummyOrders[i];
+    }
+  }
 
   let mealTime;
   let mealId;
@@ -37,7 +43,10 @@ export default (req, res) => {
       }
     }
 
-    updatedOrder = new Order(mealId, mealTime);
+    updatedOrder = new Order(mealId, mealTime, 'update', order);
+
+    // updatedOrder = Order.update(order);
+
   } else {
     msg = 'requested resource does not exist';
   }

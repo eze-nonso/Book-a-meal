@@ -33,12 +33,12 @@ suite('Remove a meal option', function() {
       .then(res => res.body.id)
       .then((id) => {
         return requester
-          .delete(`${prefix}/meals/id`)
+          .delete(`${prefix}/meals/${id}`)
           .then((res) => {
             resFormat(res, 200);
             expect(res.body).to.have.property('deleted').that.is.an('object');
-            expect(res.body.deleted).to.deep.equal(meal);
-            expect(res.body.success).to.equal('success');
+            expect(res.body.deleted).to.include(meal);
+            expect(res.body.msg).to.equal('success');
           })
           .then(() => {
             // confirm resource no longer exists

@@ -1,4 +1,4 @@
-import { Menu } from '../models/menus';
+import { Menu, dummyMenus } from '../models/menus';
 
 import { respond } from '../helpers';
 
@@ -8,10 +8,17 @@ export default (req, res) => {
   let menuArr = [];
 
   Object.keys(req.body).forEach(function (key) {
-    menuArr.push(req.body.key);
+    menuArr.push(+req.body[key]);
   });
 
+
   const { menu } = new Menu(menuArr);
+
+  dummyMenus.splice(0);
+
+  for (let i = 0; i < menu.length; i += 1) {
+    dummyMenus.push(menu[i]);
+  }
 
 
   respond({
