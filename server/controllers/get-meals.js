@@ -7,5 +7,5 @@ export default (req, res) => {
 
   respond({
     res, msg, meals: dummyMeals,
-  })
+  });
 };
