@@ -1,5 +1,12 @@
+export const dummyUser = {
+  profile: {
+    email: 'dummy@mail.com',
+    username: 'dummyusrname',
+    password: 'pass',
+  },
+};
 
-export default class User {
+export class User {
   constructor(email, password, username) {
     this.profile = {};
     this.profile.email = email;

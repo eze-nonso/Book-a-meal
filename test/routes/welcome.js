@@ -1,18 +1,8 @@
-/* eslint-disable no-unused-expressions */
+import testSetup from '../testsetup';
 
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-import app from '../../server/app';
-import { resFormat as responseFormat } from '../../server/helpers';
-
-chai.use(chaiHttp);
-
-const requester = chai.request(app);
-
-const { expect } = chai;
-const V = process.env.VERSION;
-
-const resFormat = responseFormat.bind(null, expect);
+const {
+  requester, expect, V, resFormat,
+} = testSetup;
 
 suite('Welcome endpoint', function () {
   test('Expect response to be of correct body format and content', function () {

@@ -6,11 +6,13 @@ export default (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return respond({
-      status: 422, error: errors.mapped(), msg: 'Validation Error',
+      status: 422,
+      error: errors.mapped(),
+      msg: 'Validation Error',
       res,
     });
   }
   const user = matchedData(req);
   req.body.valid = user;
-  next();
-}
+  return next();
+};
