@@ -8,9 +8,6 @@ env:
     NODE_ENV=test
     VERSION=v1
 
-services:
-  - postgresql
-
 branches:
   only: develop
 
