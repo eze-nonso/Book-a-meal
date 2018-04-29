@@ -1,4 +1,4 @@
-import { Menu , dummyMenus } from '../models/menus';
+import { dummyMenus } from '../models/menus';
 
 import { respond } from '../helpers';
 

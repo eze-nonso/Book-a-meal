@@ -42,6 +42,5 @@ export class Order {
     this.id = dummyOrders.length + 1;
 
     dummyOrders.push(this);
-
   }
 }

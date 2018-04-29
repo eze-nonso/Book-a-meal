@@ -1,4 +1,4 @@
-import { Meal , dummyMeals } from '../models/meals';
+import { dummyMeals } from '../models/meals';
 
 import { respond } from '../helpers';
 

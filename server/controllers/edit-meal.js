@@ -1,9 +1,9 @@
-import { Meal, dummyMeals } from '../models/meals';
+import { dummyMeals } from '../models/meals';
 
 import { respond } from '../helpers';
 
 export default (req, res) => {
-  const id = req.params['id'] - 1;
+  const id = req.params.id - 1;
 
   const meal = dummyMeals[id];
 

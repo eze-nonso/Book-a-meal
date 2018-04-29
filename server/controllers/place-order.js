@@ -1,4 +1,4 @@
-import { Order , dummyOrders, } from '../models/order';
+import { Order } from '../models/order';
 
 import { respond } from '../helpers';
 

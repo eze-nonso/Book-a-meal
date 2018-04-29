@@ -1,28 +1,34 @@
-import { Meal, dummyMeals } from '../models/meals';
+import { dummyMeals } from '../models/meals';
 
 import { respond } from '../helpers';
 
 export default (req, res) => {
-  const id = req.params['id'] - 1;
+  const id = req.params.id - 1;
+
+  let msg;
+  let deleted;
+  let delId;
+  let status;
 
   if (dummyMeals[id]) {
+    msg = 'success';
 
-    const msg = 'success';
+    [deleted] = dummyMeals.splice(id, 1);
 
-    const deleted = dummyMeals.splice(id, 1)[0];
+    delId = deleted.id;
 
-    const id = deleted.id;
-
-    const status = 200;
-
+    status = 200;
   } else {
-    const msg = 'requested resource not found';
+    msg = 'requested resource not found';
 
-    const status = 400;
+    status = 400;
   }
 
   respond({
-    res, msg, deleted: deleted || null, id: id || null,
+    res,
+    msg,
+    deleted: deleted || null,
+    id: delId || null,
     status,
   });
 };

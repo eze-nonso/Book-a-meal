@@ -1,6 +1,6 @@
 import { dummyMeals } from './meals';
 
-export let dummyMenus = [{
+export const dummyMenus = [{
   name: 'Jollof rice',
   description: 'Valued meal in Africa',
   image: '../img.jpg',
@@ -19,6 +19,9 @@ export class Menu {
         this.menu.push(dummyMeals[id - 1]);
       }
     }
-    dummyMenus = dummyMenus.concat(this.menu);
+
+    for (let i = 0; i < this.menu.length; i += 1) {
+      dummyMenus.push(this.menu[i]);
+    }
   }
 }

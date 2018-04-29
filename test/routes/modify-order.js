@@ -15,6 +15,7 @@ return updated resource with msg
 {
   msg: 'success',
   order: {
+    id: 1,
     mealId: 1,
     mealTime: 'dinner',
   },
