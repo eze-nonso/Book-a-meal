@@ -34,6 +34,6 @@ suite('Setup the menu for the day', function() {
         expect(res.body).to.have.property('menu').that.is.an('array');
         expect(res.body.msg).to.equal('success');
         expect(res.body.menu).to.deep.nested.include({ id: 1 }, { id: 2 });
-      })
-  })
-})
+      });
+  });
+});

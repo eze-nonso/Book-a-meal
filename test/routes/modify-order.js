@@ -28,7 +28,7 @@ suite('Modify an order', function () {
   test('Expect response to contain summary of updated resource with success message', function () {
     // first place an order
     return requester
-      .post(`${prefix}/orders`)
+      .put(`${prefix}/orders`)
       .type('form')
       .send({
         mealId: 1,

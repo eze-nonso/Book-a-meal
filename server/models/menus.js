@@ -18,10 +18,12 @@ export class Menu {
         const id = mealIdList[i];
         this.menu.push(dummyMeals[id - 1]);
       }
+
+      for (let i = 0; i < this.menu.length; i += 1) {
+        dummyMenus.push(this.menu[i]);
+      }
     }
 
-    for (let i = 0; i < this.menu.length; i += 1) {
-      dummyMenus.push(this.menu[i]);
-    }
+
   }
 }

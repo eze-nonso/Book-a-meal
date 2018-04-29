@@ -10,6 +10,6 @@ export default (req, res) => {
   dummyMeals.push(meal);
 
   respond({
-    res, msg, meal, id: meal.id, status: 200,
+    res, msg, meal, id: meal.id, status: 201,
   });
 };
