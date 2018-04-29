@@ -5,8 +5,17 @@ node_js:
 
 env:
   global:
-    NODE_ENV=test
-    VERSION=v1
+    - NODE_ENV=test
+    - VERSION=v1
+    - CC_TEST_REPORTER_ID=a084236713d5e20fb15aa1f9203aea345664bb12fdf3a8d5842be38260c9d0f5
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 branches:
   only: develop
