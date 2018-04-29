@@ -8,6 +8,6 @@ export default (req, res) => {
   const date = (new Date()).toJSON();
 
   respond({
-    res, msg, date, menu: dummyMenus,
+    res, msg, date, menu: dummyMenus, status: 200,
   });
 };

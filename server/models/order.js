@@ -2,7 +2,9 @@ import { dummyMeals } from './meals';
 
 export const dummyOrders = [
   {
+    id: 1,
     meal: {
+      id: 1,
       name: 'Rice and Stew',
       description: 'Lorem ipsum',
       image: '../img2.jpg',
@@ -10,7 +12,9 @@ export const dummyOrders = [
     mealTime: 'breakfast',
   },
   {
+    id: 2,
     meal: {
+      id: 2,
       name: 'Jollof rice',
       description: 'Valued meal in Africa',
       image: '../img.jpg',
@@ -35,5 +39,9 @@ export class Order {
       default:
         this.mealTime = 'unspecified';
     }
+    this.id = dummyOrders.length + 1;
+
+    dummyOrders.push(this);
+
   }
 }

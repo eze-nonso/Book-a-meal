@@ -9,6 +9,6 @@ export default (req, res) => {
 
 
   respond({
-    res, msg, menu,
+    res, msg, menu, status: 201,
   });
 };

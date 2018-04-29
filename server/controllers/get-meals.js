@@ -6,6 +6,6 @@ export default (req, res) => {
   const msg = 'success';
 
   respond({
-    res, msg, meals: dummyMeals,
+    res, msg, meals: dummyMeals, status: 200,
   });
 };

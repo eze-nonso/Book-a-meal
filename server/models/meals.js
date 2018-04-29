@@ -16,5 +16,6 @@ export class Meal {
     this.description = description;
     this.image = image;
     this.id = dummyMeals.length + 1;
+    dummyMeals.push(this);
   }
 }

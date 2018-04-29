@@ -13,11 +13,16 @@ export default (req, res) => {
 
     const id = deleted.id;
 
+    const status = 200;
+
   } else {
     const msg = 'requested resource not found';
+
+    const status = 400;
   }
 
   respond({
     res, msg, deleted: deleted || null, id: id || null,
+    status,
   });
 };

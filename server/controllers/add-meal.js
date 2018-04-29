@@ -12,6 +12,6 @@ export default (req, res) => {
   dummyMeals.push(meal);
 
   respond({
-    res, msg, meal, id: meal.id,
+    res, msg, meal, id: meal.id, status: 200,
   });
 }

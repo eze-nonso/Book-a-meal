@@ -13,3 +13,5 @@ export deleteMeal from './delete-meal';
 export setupMenu from './setup-menu';
 
 export getMenu from './get-menu';
+
+export placeOrder from './place-order';
