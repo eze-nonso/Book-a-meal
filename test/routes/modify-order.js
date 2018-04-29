@@ -28,7 +28,7 @@ suite('Modify an order', function () {
   test('Expect response to contain summary of updated resource with success message', function () {
     // first place an order
     return requester
-      .put(`${prefix}/orders`)
+      .post(`${prefix}/orders`)
       .type('form')
       .send({
         mealId: 1,
@@ -37,7 +37,7 @@ suite('Modify an order', function () {
       .then(res => res.body.id)
       .then((id) => {
         return requester
-          .post(`${prefix}/orders/${id}`)
+          .put(`${prefix}/orders/${id}`)
           .type('form')
           .send({
             mealTime: 3,

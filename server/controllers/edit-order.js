@@ -43,6 +43,6 @@ export default (req, res) => {
   }
 
   respond({
-    res, msg, order: updatedOrder || null, id: updatedOrder.id || null, status: 200,
+    res, msg, order: updatedOrder || null, id: updatedOrder? updatedOrder.id: null, status: 200,
   });
 };

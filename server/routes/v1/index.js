@@ -17,3 +17,5 @@ export placeOrder from './place-order';
 export editOrder from './edit-order';
 
 export getMeals from './get-meals';
+
+export showCart from './show-cart';
