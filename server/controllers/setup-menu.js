@@ -5,9 +5,9 @@ import { respond } from '../helpers';
 export default (req, res) => {
   const msg = 'success';
 
-  let menuArr = [];
+  const menuArr = [];
 
-  Object.keys(req.body).forEach(function (key) {
+  Object.keys(req.body).forEach((key) => {
     menuArr.push(+req.body[key]);
   });
 

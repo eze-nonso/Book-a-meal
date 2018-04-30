@@ -21,7 +21,5 @@ export class Menu {
         this.menu.push(dummyMeals[id - 1]);
       }
     }
-
-
   }
 }

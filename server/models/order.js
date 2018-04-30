@@ -26,7 +26,7 @@ export const dummyOrders = [
 export class Order {
   constructor(mealId, mealTime, update, order) {
     for (let i = 0; i < dummyMenus.length; i += 1) {
-      if (dummyMenus[i]['id'] == mealId) {
+      if (dummyMenus[i].id == mealId) {
         this.meal = dummyMenus[i];
       }
     }
@@ -46,12 +46,11 @@ export class Order {
     }
 
     if (this.meal) {
-
       if (update && order) {
         // find the particular order
         for (let i = 0; i < dummyOrders.length; i += 1) {
           this.id = order.id;
-          if (dummyOrders[i]['id'] == order.id) {
+          if (dummyOrders[i].id == order.id) {
             dummyOrders[i] = this;
           }
         }
@@ -61,10 +60,8 @@ export class Order {
 
         dummyOrders.push(this);
       }
-
     } else {
       delete this.mealTime;
     }
-
   }
 }
