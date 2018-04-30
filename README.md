@@ -33,7 +33,7 @@ $ git clone https://github.com/eze-nonso/Book-a-meal.git
 2. Navigate to created folder and install dependencies
 
 ```Shell
-$ `cd Book-A-meal`
+$ cd Book-A-meal
 $ npm install
 ```
 
