@@ -6,6 +6,8 @@
   "scripts": {
     "test": "nyc mocha",
     "lint": "eslint",
+    "heroku:start": "node ./server/bin/bootstrap",
+    "start": "node -r dotenv/config ./server/bind/bootstrap",
     "start:serve": "nodemon -x \"node -r dotenv/config ./node_modules/babel-cli/bin/babel-node ./server/bin/www\"",
     "lint:all": "eslint \"server/**/*.js\" app.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
