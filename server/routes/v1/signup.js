@@ -5,7 +5,7 @@ import encrypt from '../../middlewares/encrypt';
 import validationHandle from '../../middlewares/validationHandle';
 
 export default app => app.post(
-  '/signup',
+  '/auth/signup',
   // express validator
   validate(),
   // set validated to req.body.user
