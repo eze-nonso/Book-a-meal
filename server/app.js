@@ -43,4 +43,9 @@ Object.keys(VERSIONS).forEach((v) => {
   });
 });
 
+// redirect to api url
+app.get('/', (req, res) => {
+  res.redirect(`api/${process.env.VERSION}`);
+})
+
 export default app;
