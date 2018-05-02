@@ -11,7 +11,7 @@
 
 <body class='body--1'>
 <header class='header-control body--1__header'>
-  <h1 class='logo logo--main'>Booker</h1>
+  <h1 class='logo logo--main'><a href='../'>Booker</a></h1>
   <span class='hamburger'></span>
 
 </header>
@@ -21,82 +21,34 @@
   <div id="modal" class="modal">
     <span class='close'>&times;</span>
 
-    <div class="modal-content modal__card">
-      <div class='modal__card__header'>
-        <h2 class='modal__card__title'>
-          My Cart
-        </h2>
+    <div class="modal-content">
+      <div class='header'>
+        <h2 class='heading'>Initialize Cart</h2>
       </div>
-      <div class='modal__card__body'>
-        <div class='modal__card__body__sum'>
-
-
-
-          <div class='first'>
-
-            <div class='card'>
-              <div class='card__pix'>
-                <img src='https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-              </div>
-              <div class='card__body'>
-                <div class='card__body__heading'>
-                  <p>Apple mixins and Cappuchinos</p>
-                </div>
-                <div class='card__body__detail'>
-                  <span class='badge badge--1'>
-                    $ 60.00
-                  </span>
-                  <form method="POST" action="">
-                    <button type="submit" class="btn btn-1">Cancel</button>
-                </form>
-
-                </div>
-              </div>
+      <div class='body'>
+        <p>Hello world</p>
+        <div class='modal-cta mb-3'>
+          <p>Initialize Modal-cta</p>
+        </div>
+        <div class='order-sum'>
+          <div>
+            <span><a href='#' style='flex-grow:3;flex-shrink:0;'><i class="fa fa-trash" style='color:red;' aria-hidden="true">&emsp;</i></a><b>Fried Vegetable tacos</b></span>
+            <span>Lunch by 2pm</span>
+            <span>$70</span><br>
+            <div class='extra'>
+              <p>Caterer: </p><b>Don Quizxoto</b>
+              <p>Restaurant: </p><b>Ocean view eatery</b>
+              <p>Time: </p><b>2pm</b>
             </div>
-            <span class='badge badge--4'>+2: $500</span>
-            <ul class='ellipsis'>
-              <li>order was made <span><i>few minutes ago</i></span>
-              </li>
-              <li>booked for <span><i>lunch</i></span></li>
-              <li><span><i>tomorrow</i></span></li>
-            </ul>
-
           </div>
-
-          <div class='first'>
-
-            <div class='card'>
-              <div class='card__pix'>
-                <img src='https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>
-              </div>
-              <div class='card__body'>
-                <div class='card__body__heading'>
-                  <p>Apple mixins and Cappuchinos</p>
-                </div>
-                <div class='card__body__detail'>
-                  <span class='badge badge--1'>
-                    $ 60.00
-                  </span>
-                  <form method="POST" action="">
-                    <button type="submit" class="btn btn-1">Cancel</button>
-                </form>
-
-                </div>
-              </div>
-            </div>
-            <span class='badge badge--4'>+2: $500</span>
-            <ul class='ellipsis'>
-              <li>order was made <span><i>few minutes ago</i></span>
-              </li>
-              <li>booked for <span><i>lunch</i></span></li>
-              <li><span><i>tomorrow</i></span></li>
-            </ul>
-
+          <div>
           </div>
         </div>
       </div>
 
     </div>
+
+
 
   </div>
 
@@ -125,7 +77,7 @@
         <div class='details'>
           <span class='close-card'>&times;</span>
           <div class='detail-body'>
-            <h3>To Die for Crock roast pot</h3>
+            <h3>Easy Slow Cooker Enchiladas</h3>
             <p>
               The traditional cuisine of Japan (和食 washoku) is based on rice with miso soup and other dishes.
               Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, but also served raw as sashimi or in sushi.
@@ -135,7 +87,7 @@
         </div>
         <div class='action'>
           <h4 class='badge badge--2'>Price: $67</h4>
-          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button>
+          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;<a href='./book-meal' class='a-cover'></a></button>
         </div>
       </div>
 
@@ -150,7 +102,7 @@
         <div class='details'>
           <span class='close-card'>&times;</span>
           <div class='detail-body'>
-            <h3>To Die for Crock roast pot</h3>
+            <h3>Easy Slow Cooker Enchiladas</h3>
             <p>
               The traditional cuisine of Japan (和食 washoku) is based on rice with miso soup and other dishes.
               Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, but also served raw as sashimi or in sushi.
@@ -160,7 +112,7 @@
         </div>
         <div class='action'>
           <h4 class='badge badge--2'>Price: $67</h4>
-          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button>
+          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;<a href='./book-meal' class='a-cover'></a></button>
         </div>
       </div>
 
@@ -168,15 +120,14 @@
         <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='sons of men painting'>
         <div class='card-body'>
           <span class='expand'></span>
-          <h4 class='card-title'>To die for Cock roast pot</h4>
+          <h4 class='card-title'>Sweet Potatoes and Black Beans Tacos</h4>
           <h5 class='card-subtitle'>Now trending</h5>
-          <p class='text-muted'>Popular listing</p>
+          <p class='text-muted'>Last booked 17 mins ago</p>
         </div>
-
         <div class='details'>
           <span class='close-card'>&times;</span>
           <div class='detail-body'>
-            <h3>To Die for Crock roast pot</h3>
+            <h3>Easy Slow Cooker Enchiladas</h3>
             <p>
               The traditional cuisine of Japan (和食 washoku) is based on rice with miso soup and other dishes.
               Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, but also served raw as sashimi or in sushi.
@@ -186,7 +137,7 @@
         </div>
         <div class='action'>
           <h4 class='badge badge--2'>Price: $67</h4>
-          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button>
+          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;<a href='./book-meal' class='a-cover'></a></button>
         </div>
       </div>
 
@@ -194,7 +145,7 @@
         <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='sons of men painting'>
         <div class='card-body'>
           <span class='expand'></span>
-          <h4 class='card-title'>To die for Cock roast pot</h4>
+          <h4 class='card-title'>Easy Slow Cooker Enchiladas</h4>
           <h5 class='card-subtitle'>Now trending</h5>
           <p class='text-muted'>Popular</class>
         </div>
@@ -202,7 +153,7 @@
         <div class='details'>
           <span class='close-card'>&times;</span>
           <div class='detail-body'>
-            <h3>To Die for Crock roast pot</h3>
+            <h3>Easy Slow Cooker Enchiladas</h3>
             <p>
               The traditional cuisine of Japan (和食 washoku) is based on rice with miso soup and other dishes.
               Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, but also served raw as sashimi or in sushi.
@@ -212,22 +163,22 @@
         </div>
         <div class='action'>
           <h4 class='badge badge--2'>Price: $67</h4>
-          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button>
+          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;<a href='./book-meal' class='a-cover'></a></button>
         </div>
       </div>
 
       <div class='card card--2'>
-        <img src='https://images.pexels.com/photos/660282/pexels-photo-660282.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='sons of men painting'>
+        <img src='https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&h=350' class='card-img-top' alt='sons of men painting'>
         <div class='card-body'>
           <span class='expand'></span>
-          <h4 class='card-title'>To die for Cock roast pot</h4>
-          <h5 class='card-subtitle'>Updated 55 mins ago</h5>
-          <p class='text-muted'>Now trending</p>
+          <h4 class='card-title'>Sweet Potatoes and Black Beans Tacos</h4>
+          <h5 class='card-subtitle'>Now trending</h5>
+          <p class='text-muted'>Last booked 17 mins ago</p>
         </div>
         <div class='details'>
           <span class='close-card'>&times;</span>
           <div class='detail-body'>
-            <h3>To Die for Crock roast pot</h3>
+            <h3>Easy Slow Cooker Enchiladas</h3>
             <p>
               The traditional cuisine of Japan (和食 washoku) is based on rice with miso soup and other dishes.
               Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, but also served raw as sashimi or in sushi.
@@ -237,7 +188,7 @@
         </div>
         <div class='action'>
           <h4 class='badge badge--2'>Price: $67</h4>
-          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;Book</button>
+          <button class='btn btn-1'><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>&emsp;<a href='./book-meal' class='a-cover'></a></button>
         </div>
       </div>
 
