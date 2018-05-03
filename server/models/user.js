@@ -6,7 +6,7 @@ export const dummyUser = {
   },
 };
 
-export class User {
+export class UserModel {
   constructor(email, password, username) {
     this.profile = {};
     this.profile.email = email;

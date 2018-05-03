@@ -906,7 +906,7 @@ h4.card-title:hover {
 }
 
 .order-sum > div:not(:last-child) {
-  border-bottom: 1px solid;
+  margin-bottom: 2rem;
 }
 
 .order-sum > div > div {
@@ -918,9 +918,7 @@ h4.card-title:hover {
 }
 
 
-.order-sum .extra {
-
-}
+.order-sum .extra {margin-top: 1rem;}
 
 /* The Close Button */
 .close {
@@ -1601,9 +1599,14 @@ utility classes
   justify-content: center;
 }
 
-.mb-0 {
+.mb-0  {
   margin-bottom: 0;
 }
+
+.ml-3 {
+  margin-left: 1rem;
+}
+
 
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -1687,4 +1690,16 @@ utility classes
 
 .justify-center {
   justify-content: center;
-} 
+}
+
+.f-right {
+  float: right !important;
+}
+
+.fl-2 {
+  flex: 2;
+}
+
+.fl-1 {
+  flex: 1;
+}

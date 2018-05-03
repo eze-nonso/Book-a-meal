@@ -2,23 +2,32 @@ import { dummyMeals } from './meals';
 
 export const dummyMenus = [{
   id: 1,
-  name: 'Jollof rice',
-  description: 'Valued meal in Africa',
-  image: '../img.jpg',
+  meals: dummyMeals,
+  date: (new Date('15-02-18')).toJSON(),
 }, {
-  id: 2,
-  name: 'Rice and Stew',
-  description: 'Lorem ipsum',
-  image: '../img2.jpg',
+  id: 1,
+  meals: dummyMeals,
+  date: (new Date('16-02-18')).toJSON(),
+}, {
+  id: 1,
+  meals: dummyMeals,
+  date: (new Date('17-02-18')).toJSON(),
 }];
 
-export class Menu {
+export class MenuModel {
   constructor(mealIdList) {
     if (mealIdList instanceof Array) {
-      this.menu = [];
-      for (let i = 0; i < mealIdList.length; i += 1) {
-        const id = mealIdList[i];
-        this.menu.push(dummyMeals[id - 1]);
+      this.meals = [];
+      dummyMeals.forEach((id, meal) => {
+        if ((mealIdList).includes(meal.id)) {
+          this.meals.push(meal);
+        }
+      });
+
+      if (this.meals.length) {
+        this.date = (new Date()).toJSON();
+        this.id = dummyMenus.length + 1;
+        dummyMenus.push(this);
       }
     }
   }
