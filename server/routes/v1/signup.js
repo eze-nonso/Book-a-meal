@@ -1,4 +1,5 @@
-import { signup } from '../../controllers';
+import { signup } from '../../controllers/user-controller';
+import 'colors';
 import authController from '../../auth/authController';
 import validate from '../../middlewares/validate.signup';
 import encrypt from '../../middlewares/encrypt';

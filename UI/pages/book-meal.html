@@ -1,0 +1,67 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat|Prompt | Roboto:400,500" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='../css/style.css'/>
+  </head>
+  <body class='body--1 body--auth'>
+    <header class='header-control body--1__header'>
+      <h1 class='logo logo--main'><a href='../'>Booker</a></h1>
+
+  </header>
+
+    <main class='auth'>
+      <div class='row justify-center'>
+        <div class='col-12 col-sm-8 col-lg-6'>
+          <span class='msg'>Place order</span>
+          <div class='form-card'>
+            <div class='header'>
+              <h2 class='heading'>Fried Tacos</h2>
+            </div>
+            <div class='header meal-detail'>
+              <div class='detail-field'>
+                <h3>Restaurant</h3>
+                <p>Pine Rest field restaurant off Crescent lane</p>
+              </div>
+              <div class='detail-field'>
+                <div>
+                  <h3>Price</h3>
+                  <p>$60</p>
+                </div>
+                <div>
+                  <h3>Caterer</h3>
+                  <p>Don Quinnox</p>
+                </div>
+              </div>
+            </div>
+            <div class='body'>
+              <form method='GET' action='./daily-menu'>
+                <div class='meal-time'>
+                  <span class='meal-switch'>Select meal-time</span>
+                  <input type='radio' name='meal-time' id='check4' required>
+                  <label class='btn btn-2' for='check4'>Breakfast
+                  </label>
+                  <input type='radio' name='meal-time' id='check5' required>
+                  <label class='btn btn-2' for='check5'>Lunch
+                  </label>
+                  <input type='radio' name='meal-time' id='check6' required>
+                  <label class='btn btn-2' for='check6'>Dinner
+                  </label>
+                </div>
+                <button class='btn btn-2 extra' style='width:40%;display:inline-block;' type='submit'>Book</button>
+                <button class='btn btn-2 to-menu' type='button' style='display:inline-block;position:relative;'>Back<a href='./daily-menu' class='a-cover'></a></button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <footer class='footer-control body--1__footer'><footer class=''
+    <script src='../js/script.js'>
+    </script>
+  </body>
+</html>

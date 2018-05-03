@@ -74,6 +74,7 @@ function openDrawer(card) {
 }
 
 function reload() {
+  // force reload from server
   window.location.reload(true);
 }
 

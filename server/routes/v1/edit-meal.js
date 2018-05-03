@@ -1,3 +1,3 @@
-import { editMeal } from '../../controllers';
+import { updateMeal as editMeal } from '../../controllers/meal-controller';
 
 export default app => app.put('/meals/:id', editMeal);

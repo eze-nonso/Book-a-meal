@@ -12,7 +12,7 @@ export setupMenu from './setup-menu';
 
 export getMenu from './get-menu';
 
-export placeOrder from './place-order';
+export addOrder from './add-order';
 
 export editOrder from './edit-order';
 

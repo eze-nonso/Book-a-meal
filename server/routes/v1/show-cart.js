@@ -1,3 +1,3 @@
-import { showCart } from '../../controllers';
+import { showCart } from '../../controllers/order-controller';
 
 export default app => app.get('/orders', showCart);

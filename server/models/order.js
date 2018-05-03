@@ -1,5 +1,7 @@
 import { dummyMenus } from './menus';
 
+import { checkDay } from '../helpers';
+
 export const dummyOrders = [
   {
     id: 1,
@@ -23,13 +25,24 @@ export const dummyOrders = [
   },
 ];
 
-export class Order {
+export class OrderModel {
   constructor(mealId, mealTime, update, order) {
-    for (let i = 0; i < dummyMenus.length; i += 1) {
-      if (dummyMenus[i].id == mealId) {
-        this.meal = dummyMenus[i];
+
+    // select particulars days menu from dummyMenus
+    const  today = (new Date().toJSON());
+    let todayMenu;
+
+    dummyMenus.forEach((key, menu) => {
+      if (checkDay(menu.date, today)) {
+        todayMenu = menu;
+        menu.meals.forEach((key, meal) => {
+          if (meal.id === mealId) {
+            this.meal = meal;
+          }
+        });
       }
-    }
+    });
+
 
     switch (mealTime) {
       case '1':
