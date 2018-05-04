@@ -1,3 +1,4 @@
-import { getMeals } from '../../controllers/meal-controller';
+import { getMeals, getMealsSuccess } from '../../controllers/meal-controller';
+import authenticate from '../../auth/authenticate';
 
-export default app => app.get('/meals', getMeals);
+export default app => app.get('/meals', authenticate, getMeals, getMealsSuccess);

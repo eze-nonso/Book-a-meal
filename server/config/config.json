@@ -1,0 +1,42 @@
+{
+  "development": {
+    "use_env_variable": "DEVURL",
+    "options": {
+      "operatorsAliases": false,
+      "define": {
+        "schema": "shuffler",
+        "underscored": true
+      }
+    },
+    "migrationStorageTableName": {
+      "tableName": "sequelize_meta",
+      "schema": "shuffler"
+    }
+  },
+  "test": {
+    "use_env_variable": "TESTURL",
+    "options": {
+      "define": {
+        "schema": "shuffler",
+        "underscored": true
+      }
+    },
+    "migrationStorageTableName": {
+      "tableName": "sequelize_meta",
+      "schema": "shuffler"
+    }
+  },
+  "production": {
+    "use_env_variable": "PRODURL",
+    "options": {
+      "define": {
+        "schema": "shuffer",
+        "underscored": true
+      }
+    },
+    "migrationStorageTableName": {
+      "tableName": "sequelize_meta",
+      "schema": "shuffler"
+    }
+  }
+}

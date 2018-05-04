@@ -1,5 +1,4 @@
 import { signup } from '../../controllers/user-controller';
-import 'colors';
 import authController from '../../auth/authController';
 import validate from '../../middlewares/validate.signup';
 import encrypt from '../../middlewares/encrypt';
@@ -9,12 +8,10 @@ export default app => app.post(
   '/auth/signup',
   // express validator
   validate(),
-  // set validated to req.body.user
   validationHandle,
   // set token to res header
   authController,
-  // hash req.body.valid.password
   encrypt,
   // save and send details to user
-  signup,
+  signup
 );

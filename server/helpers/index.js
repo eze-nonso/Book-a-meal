@@ -4,4 +4,4 @@ export resFormat from './resformat.test';
 
 export checkDay from './compare-dates';
 
-export unique from './is-unique';
+export query from './query';
