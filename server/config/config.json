@@ -30,7 +30,7 @@
     "use_env_variable": "PRODURL",
     "options": {
       "define": {
-        "schema": "shuffer",
+        "schema": "shuffler",
         "underscored": true
       }
     },
