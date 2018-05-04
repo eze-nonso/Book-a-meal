@@ -1,5 +1,11 @@
 /* eslint-disable no-unused-expressions */
 
+/**
+ * @description export for reused tests
+ * @param {function} expect chai expect
+ * @param {object} res response object
+ * @param {number} status response status code
+ */
 export default function (expect, res, status) {
   expect(res).to.have.status(status);
   // test content type
