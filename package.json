@@ -10,7 +10,10 @@
     "start": "node -r dotenv/config ./server/bind/bootstrap",
     "start:serve": "nodemon -x \"node -r dotenv/config ./node_modules/babel-cli/bin/babel-node ./server/bin/www\"",
     "lint:all": "eslint \"server/**/*.js\" app.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "seq": "sequelize",
+    "migrate": "npm run seq -- db:migrate",
+    "doc": "jsdoc"
   },
   "repository": {
     "type": "git",
@@ -33,6 +36,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "faker": "^4.1.0",
+    "jsdoc": "^3.5.5",
     "mocha": "^5.1.1",
     "nodemon": "^1.17.3",
     "nyc": "^11.7.1"
@@ -48,6 +52,11 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-validator": "^5.1.2",
-    "jsonwebtoken": "^8.2.1"
+    "jsonwebtoken": "^8.2.1",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.37.6",
+    "sequelize-cli": "^4.0.0",
+    "umzug": "^2.1.0"
   }
 }

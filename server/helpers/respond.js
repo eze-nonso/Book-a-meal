@@ -1,3 +1,9 @@
+/**
+ * @description export for responding to requests
+ * @param {object} res express response object
+ * @param {string} msg response message
+ * @param {array} extra any extra arguments
+ */
 export default ({
   res, msg, status, ...extra
 }) => {

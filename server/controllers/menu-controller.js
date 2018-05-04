@@ -1,4 +1,4 @@
-import { dummyMenus, MenuModel } from '../models/menus';
+import { dummyMenus, MenuModel } from '../models';
 
 import { respond, checkDay } from '../helpers';
 
