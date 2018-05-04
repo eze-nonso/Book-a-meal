@@ -3,6 +3,11 @@ import { respond, query } from '../helpers';
 
 const { Op } = Sequelize;
 
+/**
+ * @description represents Meal model functions
+ * @constructor
+ *
+ */
 export default class Meals {
   static addMeal (req, res, next) {
     return query(req, Op, User)

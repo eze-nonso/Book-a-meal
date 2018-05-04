@@ -4,4 +4,4 @@ export default (sequelize, DataTypes) => {
     // associations can be defined here
   };
   return MealMenu;
-}
+};

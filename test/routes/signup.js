@@ -21,13 +21,22 @@ const {
 suite('Signup', function() {
   test('Expect error on invalid signup email', function() {
     return requester
-      .post('/auth/signup')
+      .post(`${prefix}/auth/signup`)
       .type('form')
       .send({
         username: 'Helloworld',
         password: 'hello',
         confirmPassword: 'hello',
         email: 'Helloworld',
+      })
+      .then((res) => {
+        expect.fail('Expected fail for invalid email');
+      })
+      .catch((e) => {
+        if (e.response) {
+          return e.response;
+        }
+        throw e;
       })
       .then((res) => {
         resFormat(res, 422);
@@ -37,13 +46,22 @@ suite('Signup', function() {
 
   test('Expect error on non-matching passwords', function() {
     return requester
-      .post('/auth/signup')
+      .post(`${prefix}/auth/signup`)
       .type('form')
       .send({
         username: 'helloworld',
         email: 'hello@gmail.com',
         password: 'hello',
         confirmPassword: 'hello2',
+      })
+      .then((res) => {
+        expect.fail('Expected fail for non-matching passwords');
+      })
+      .catch((e) => {
+        if (e.response) {
+          return e.response;
+        }
+        throw e;
       })
       .then(res => {
         resFormat(res, 400);
@@ -53,7 +71,7 @@ suite('Signup', function() {
 
   test('Expect error on already existing username', function() {
     return requester
-      .post('/auth/signup')
+      .post(`${prefix}/auth/signup`)
       .type('form')
       .send({
         username: 'helloworld',
@@ -63,7 +81,7 @@ suite('Signup', function() {
       })
       .then(() => {
         return requester
-          .post('/auth/signup')
+          .post(`${prefix}/auth/signup`)
           .type('form')
           .send({
             username: 'helloworld',

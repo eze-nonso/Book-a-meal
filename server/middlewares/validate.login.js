@@ -1,5 +1,11 @@
 import { body, oneOf } from 'express-validator/check';
 
+/**
+ * @description express validation for login route
+ *
+ *
+ * @returns {array} array of validation functions
+ */
 export default () => ([
   body('password')
     .exists(),

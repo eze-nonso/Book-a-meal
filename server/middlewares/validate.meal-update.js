@@ -1,6 +1,12 @@
 import { body, param } from 'express-validator/check';
 import { sanitize } from 'express-validator/filter';
 
+/**
+ *
+ * @description function to validate meal-update route
+ *
+ * @returns {array} array of middleware validation functions
+ */
 export default () => ([
   sanitize('price')
     .toInt(),

@@ -1,5 +1,10 @@
 import { body } from 'express-validator/check';
 
+/**
+ * @description function to validate signup route
+ *
+ * @returns {array} array of middleware validation functions
+ */
 export default () => ([
   body('email')
     .isEmail()

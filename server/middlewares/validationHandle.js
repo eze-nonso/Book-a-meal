@@ -1,7 +1,11 @@
 import { validationResult } from 'express-validator/check';
 import { respond } from '../helpers';
 
-// function to set valid data to req.body
+/**
+ * @description function to trap validation errors
+ *
+ * @returns {null} sends errors to response 
+ */
 export default (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
