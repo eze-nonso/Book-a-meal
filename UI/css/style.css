@@ -48,6 +48,8 @@ body {
 
 .main__sec {
   background: url('https://images.pexels.com/photos/33242/cooking-ingredient-cuisine-kitchen.jpg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat top center / cover;
+  display: flex;
+  align-items: center;
 }
 
 main.auth {
@@ -1687,4 +1689,4 @@ utility classes
 
 .justify-center {
   justify-content: center;
-} 
+}
